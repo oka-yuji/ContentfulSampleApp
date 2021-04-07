@@ -12,6 +12,7 @@ struct AnimationHeaderDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+               
         }
     }
 }

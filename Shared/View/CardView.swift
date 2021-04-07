@@ -13,7 +13,6 @@ struct CardView: View {
         HStack{
             VStack(alignment: .leading, spacing: 5, content: {
                 Text(food.title)
-                    .font(.title2)
                     .fontWeight(.bold)
                 
                 Text(food.description)
