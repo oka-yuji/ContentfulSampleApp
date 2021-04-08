@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287A20CE261F38AB005EDB0F /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 287A20CD261F38AB005EDB0F /* Contentful */; };
 		28D9A8862614C7A0003D50B4 /* AnimationHeaderDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9A8732614C79F003D50B4 /* AnimationHeaderDemoApp.swift */; };
 		28D9A8872614C7A0003D50B4 /* AnimationHeaderDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9A8732614C79F003D50B4 /* AnimationHeaderDemoApp.swift */; };
 		28D9A8882614C7A0003D50B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9A8742614C79F003D50B4 /* ContentView.swift */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287A20CE261F38AB005EDB0F /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +150,9 @@
 			dependencies = (
 			);
 			name = "AnimationHeaderDemo (iOS)";
+			packageProductDependencies = (
+				287A20CD261F38AB005EDB0F /* Contentful */,
+			);
 			productName = "AnimationHeaderDemo (iOS)";
 			productReference = 28D9A87A2614C7A0003D50B4 /* AnimationHeaderDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +200,9 @@
 				Base,
 			);
 			mainGroup = 28D9A86D2614C79F003D50B4;
+			packageReferences = (
+				287A20CC261F38AB005EDB0F /* XCRemoteSwiftPackageReference "contentful.swift" */,
+			);
 			productRefGroup = 28D9A87B2614C7A0003D50B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -487,6 +495,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		287A20CC261F38AB005EDB0F /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/contentful/contentful.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		287A20CD261F38AB005EDB0F /* Contentful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 287A20CC261F38AB005EDB0F /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			productName = Contentful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28D9A86E2614C79F003D50B4 /* Project object */;
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HeaderView: View {
     @EnvironmentObject var homeData : HomeViewModel
-    @Environment(\.colorScheme) var scheme
+   
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             
@@ -66,7 +66,7 @@ struct HeaderView: View {
                                     .padding(.horizontal)
                                     .background(Color.primary.opacity(homeData.selectedTab == tab.tab ? 1 : 0))
                                     .clipShape(Capsule())
-                                    .foregroundColor(homeData.selectedTab == tab.tab ? scheme == .dark ? Color.black : Color.white : Color.primary)
+                                    .foregroundColor(homeData.selectedTab == tab.tab ?  Color.white : Color.primary)
                                     .id(tab.tab)
                                     
                             }
@@ -91,7 +91,7 @@ struct HeaderView: View {
         }
         .padding(.horizontal)
         .frame(height: 100)
-        .background(scheme == .dark ? Color.black : Color.white)
+        .background(Color.white)
     }
     
     
@@ -112,5 +112,6 @@ struct HeaderView: View {
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .environmentObject(HomeViewModel())
     }
 }

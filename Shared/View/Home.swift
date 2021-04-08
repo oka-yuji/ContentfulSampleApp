@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @StateObject var homedata = HomeViewModel()
-    @Environment(\.colorScheme) var scheme
+  
     var body: some View {
         ScrollView{
             
@@ -98,7 +98,7 @@ struct Home: View {
             })
         }
         .overlay(
-            (scheme == .dark ? Color.black : Color.white)
+            Color.white
                 .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
                 .ignoresSafeArea(.all, edges: .top)
                 .opacity(homedata.offset > 250 ? 1 : 0)
@@ -111,5 +111,6 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .environmentObject(HomeViewModel())
     }
 }
