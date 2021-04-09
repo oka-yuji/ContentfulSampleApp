@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var food: FoodData
+//    @ObservedObject var store = FoodStore()
     var body: some View {
         HStack{
             VStack(alignment: .leading, spacing: 5, content: {
@@ -23,7 +24,7 @@ struct CardView: View {
                     .fontWeight(.bold)
             })
             Spacer()
-            Image(food.image)
+            Image(uiImage: food.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 130, height: 130)

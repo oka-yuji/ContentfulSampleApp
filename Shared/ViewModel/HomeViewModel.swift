@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Contentful
+import Combine
 
 class HomeViewModel: ObservableObject{
     @Published var offset: CGFloat = 0
